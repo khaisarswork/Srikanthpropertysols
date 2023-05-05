@@ -11,13 +11,16 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_05_05_160813) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
     t.string "resource_type"
-    t.integer "resource_id"
+    t.bigint "resource_id"
     t.string "author_type"
-    t.integer "author_id"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
@@ -49,8 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_05_160813) do
   end
 
   create_table "layouts_plots", id: false, force: :cascade do |t|
-    t.integer "layout_id", null: false
-    t.integer "plot_id", null: false
+    t.bigint "layout_id", null: false
+    t.bigint "plot_id", null: false
     t.index ["layout_id", "plot_id"], name: "index_layouts_plots_on_layout_id_and_plot_id"
   end
 
@@ -67,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_05_160813) do
     t.float "second_installment"
     t.float "third_installment"
     t.float "balance_amt"
-    t.integer "layout_id", null: false
+    t.bigint "layout_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["layout_id"], name: "index_plots_on_layout_id"
