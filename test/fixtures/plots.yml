@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plot_no: 1
+  customer: MyString
+  phone: 1
+  plt_amt: 1.5
+  advance: 1.5
+  agreement: 1.5
+  total_amt: 1.5
+  next_duedate: 2023-05-01 17:12:16
+  first_installment: 1.5
+  second_installment: 1.5
+  third_installment: 1.5
+  balance_amt: 1.5
+  layout: one
+
+two:
+  plot_no: 1
+  customer: MyString
+  phone: 1
+  plt_amt: 1.5
+  advance: 1.5
+  agreement: 1.5
+  total_amt: 1.5
+  next_duedate: 2023-05-01 17:12:16
+  first_installment: 1.5
+  second_installment: 1.5
+  third_installment: 1.5
+  balance_amt: 1.5
+  layout: two
